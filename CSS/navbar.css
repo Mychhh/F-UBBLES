@@ -7,6 +7,8 @@
 }
 :root{
     --WHITE-COLOR: #FFF;
+    --YELLOW-COLOR: #FFE600;
+    --GRAY-COLOR: #939594;
     --LIGHT-COLOR: #F1FDFB;
     --DARK-COLOR: #1C1D30;
     --FONT-SIZE-DEFAULT: 1rem;
@@ -14,6 +16,7 @@
 }
 body{
     background-color: var(--LIGHT-COLOR);
+    overflow-x: hidden;
 }
 nav{
     margin: 0 auto;
