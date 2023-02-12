@@ -13,7 +13,6 @@
     font-size: 3rem;
     text-align: center;
 }
-
 .bubble{
     z-index: -1;
 }
@@ -31,11 +30,40 @@
     right: -2%;
 }
 .page_two__bubble_right{
+    /* animation-name: pageTwoBubbleRight;
+    animation-duration: 1s;
+    animation-timing-function: linear; */
+    opacity: 0;
+}
+.page_two__bubble_right::before{
+    content: '';
+    width: 4rem;
+    height: 4rem;
+
+    transform: translate(-4rem, 2rem);
+/* 
+    animation-name: pageTwoBubbleRightBefore;
+    animation-duration: 1s;
+    animation-timing-function: linear; */
+}
+.page_two__bubble_right::after{
+    content: '';
+    width:3rem;
+    height: 3rem;
+
+    transform: translate(1rem, 5rem);
+/* 
+    animation-name: pageTwoBubbleRightAfter;
+    animation-duration: 1s;
+    animation-timing-function: linear; */
+}
+.page_two__bubble_right.active{
     animation-name: pageTwoBubbleRight;
     animation-duration: 1s;
     animation-timing-function: linear;
+    opacity: 1;
 }
-.page_two__bubble_right::before{
+.page_two__bubble_right.active::before{
     content: '';
     width: 4rem;
     height: 4rem;
@@ -46,7 +74,7 @@
     animation-duration: 1s;
     animation-timing-function: linear;
 }
-.page_two__bubble_right::after{
+.page_two__bubble_right.active::after{
     content: '';
     width:3rem;
     height: 3rem;
@@ -98,11 +126,36 @@
     left: -5%;
 }
 .page_two__bubble_left{
+    /* animation-name: pageTwoBubbleLeft;
+    animation-duration: 1s;
+    animation-timing-function: linear; */
+    opacity: 0;
+}
+.page_two__bubble_left::before{
+    content: '';
+    width: 4rem;
+    height: 4rem;
+
+    transform: translate(3rem, -3rem);
+
+    /* animation-name: pageTwoBubbleLeftBefore;
+    animation-duration: 1s;
+    animation-timing-function: linear; */
+}
+.page_two__bubble_left::after{
+    content: '';
+    width: 3rem;
+    height: 3rem;
+
+    transform: translate(7rem, 2rem);
+}
+.page_two__bubble_left.active{
     animation-name: pageTwoBubbleLeft;
     animation-duration: 1s;
     animation-timing-function: linear;
+    opacity: 1;
 }
-.page_two__bubble_left::before{
+.page_two__bubble_left.active::before{
     content: '';
     width: 4rem;
     height: 4rem;
@@ -112,13 +165,6 @@
     animation-name: pageTwoBubbleLeftBefore;
     animation-duration: 1s;
     animation-timing-function: linear;
-}
-.page_two__bubble_left::after{
-    content: '';
-    width: 3rem;
-    height: 3rem;
-
-    transform: translate(7rem, 2rem);
 }
 @keyframes pageTwoBubbleLeft {
     from{
@@ -130,10 +176,10 @@
 }
 @keyframes pageTwoBubbleLeftBefore {
     from{
-        transform: translate(4rem, 300%);
+        transform: translate(3rem, 300%);
     }
     to{
-        transform: translate(4rem, -3rem);
+        transform: translate(3rem, -3rem);
     }
 }
 /* end of bubble left */
