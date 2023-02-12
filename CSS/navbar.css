@@ -15,8 +15,10 @@
     --BORDER-BUTTON: 1px solid  var(--DARK-COLOR);
 }
 body{
+    min-height: 100vh;
     background-color: var(--LIGHT-COLOR);
     overflow-x: hidden;
+    z-index: -10000;
 }
 nav{
     margin: 0 auto;
@@ -111,7 +113,8 @@ nav{
 
 /* nav menu mobile */
 .nav__menu_mobile{
-    display: block;
+    /* display: block; */
+    display: fixed;
     width: 40%;
     height: 100vh;
     position: absolute;
@@ -120,6 +123,8 @@ nav{
     transform: translateX(-100%);
     background-color: var(--LIGHT-COLOR);
     border-right: var(--BORDER-BUTTON);
+
+    z-index: 1;
 }
 .nav__menu_mobile.inactive{
     animation-name: slideOutLeftSlider;
@@ -186,6 +191,11 @@ nav{
     }
     .nav__menu_button{
         display: flex;
+    }    
+    .nav__logo{
+        width: clamp(4rem, 4vh, 5rem);
+        height: clamp(4rem, 4vh, 5rem);
+        margin: 1rem 0;
     }
 }
 /* SMALL SCREEN */
@@ -195,6 +205,11 @@ nav{
     }
     .nav__menu_button{
         display: flex;
+    }
+    .nav__logo{
+        width: clamp(4rem, 4vh, 5rem);
+        height: clamp(4rem, 4vh, 5rem);
+        margin: 1rem 0;
     }
 }
 /* MEDIUM SCREEN */
