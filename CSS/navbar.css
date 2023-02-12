@@ -13,6 +13,8 @@
     --DARK-COLOR: #1C1D30;
     --FONT-SIZE-DEFAULT: 1rem;
     --BORDER-BUTTON: 1px solid  var(--DARK-COLOR);
+    --PARAGRAPH-SIZE: clamp(.7rem, 3vh, 1.5rem);
+    --HEADER1-SIZE: clamp(1rem, 5vh, 2rem);
 }
 body{
     min-height: 100vh;

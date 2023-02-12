@@ -137,7 +137,7 @@
     color: var(--DARK-COLOR);
 }
 .background__paragraph{
-    font-size: clamp(.7rem, 3vh, 1.5rem);
+    font-size: var(--PARAGRAPH-SIZE);
     color: var(--DARK-COLOR);
 }
 /* bubbles container */
