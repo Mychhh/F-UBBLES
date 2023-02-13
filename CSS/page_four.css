@@ -7,6 +7,8 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+
+    gap: 2rem;
 }
 .page_four__instrunction{
     width: 50%;
@@ -25,8 +27,8 @@
 }
 .page_four__how_to_use{
     width: 50%;
+    position: relative;
 }
-
 .page_four__slider_container{
     position: relative;
     width: 100%;
@@ -49,12 +51,207 @@
     object-fit: cover;
     height: 100%;
 }
-/* 
-.page_four__slider:first-child{
+#page_four__prev_button{
+    position: absolute;
+    top:0%;
     left: 0;
-}.page_four__slider:nth-child(2){
-    left: 100%;
+    height: 100%;
+    width: 10%;
+    border: none;
+    border-radius: 1em 0 0 1em;
+    cursor: pointer;
+    background: rgba(240, 232, 232, 0.233);
 }
-.page_four__slider:last-child{
-    left: 200%;
-} */
+#page_four__next_button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 10%;
+    border: none;
+    border-radius: 0 1em 1em 0;
+    cursor: pointer;
+    background: rgba(240, 232, 232, 0.233);
+}
+.page_four__bubble_left,
+.page_four__bubble_left::before,
+.page_four__bubble_left::after{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: linear-gradient(to top right, transparent, var(--YELLOW-COLOR));
+
+    position: absolute;
+    top: 5%;
+    left: -5%;
+}
+.page_four__bubble_left{
+    opacity: 0;
+}
+.page_four__bubble_left::before{
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    transform: translate(-0.5rem, 5rem);
+}
+.page_four__bubble_left::after{
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    transform: translate(4rem, 3rem);
+}
+.page_four__bubble_left.active{
+    animation-name: pageFourBubbleLeft;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    opacity: 1;
+}
+.page_four__bubble_left.active::before{
+    animation-name: pageFourBubbleLeftBefore;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    opacity: 1;
+}
+@keyframes pageFourBubbleLeft {
+    from{
+        transform: translate(0, 200%);
+    }
+    to{
+        transform: translate(0, 0);
+    }
+}
+@keyframes pageFourBubbleLeftBefore {
+    from{
+        transform: translate(-0.5rem, 300%);
+    }
+    to{
+        transform: translate(-0.5rem, 5rem);
+    }
+}
+.page_four__bubble_right,
+.page_four__bubble_right::before,
+.page_four__bubble_right::after{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: linear-gradient(to top right, transparent, var(--YELLOW-COLOR));
+
+    position: absolute;
+    bottom: 0%;
+    right: -7%;
+}
+.page_four__bubble_right::before{
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    transform: translate(-1.5rem, -5rem);
+}
+.page_four__bubble_right::after{
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    transform: translate(-5rem, -1rem);
+}
+.page_four__bubble_right{
+    opacity: 0;
+}
+.page_four__bubble_right.active{
+    animation-name: pageFourBubbleRight;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    opacity: 1;
+}
+.page_four__bubble_right.active::before{
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    transform: translate(-1.5rem, -5rem);
+
+    animation-name: pageFourBubbleRightBefore;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    opacity: 1;
+}
+@keyframes pageFourBubbleRight {
+    from{
+        transform: translate(0, 200%);
+    }
+    to{
+        transform: translate(0, 0);
+    }
+}
+@keyframes pageFourBubbleRightBefore {
+    from{
+        transform: translate(-1.5rem, 200%);
+    }
+    to{
+        transform: translate(-1.5rem, -5rem);
+    }
+}
+
+/* EXTRA SMALL SCREEN */
+@media screen and (max-width: 481px) {
+    .page_four{
+        width: 85%;
+        margin: 3rem auto 0 auto;
+        padding: 4rem 0;
+        position: relative;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        gap: 1rem;
+    }
+    .page_four__instrunction{
+        width: 90%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: start;
+        gap: 1rem;
+    }
+    .page_four__how_to_use{
+        width: 90%;
+        position: relative;
+    }
+}
+/* SMALL SCREEN */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .page_four{
+        width: 85%;
+        margin: 3rem auto 0 auto;
+        padding: 4rem 0;
+        position: relative;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        gap: 1rem;
+    }
+    .page_four__instrunction{
+        width: 65%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: start;
+        gap: 1rem;
+    }
+    .page_four__how_to_use{
+        width: 65%;
+        position: relative;
+    }
+}
+/* MEDIUM SCREEN */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+}
+/* LARGE SCREEN */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+}
+/* EXTRA LARGE SCREEN */
+@media screen and (min-width: 1201px) {
+}
+/* MOBILE DEVICE LANDSCAPE */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4){
+}

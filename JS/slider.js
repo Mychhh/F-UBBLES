@@ -18,8 +18,6 @@ prevButton.addEventListener('click', () => {
     counter--
     carousel()
 })
-
-
 const carousel = () => {
 
     if(counter < 0){
