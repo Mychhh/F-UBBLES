@@ -4,6 +4,8 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Itim', cursive;
+    
+    scroll-behavior: smooth;
 }
 :root{
     --WHITE-COLOR: #FFF;
@@ -20,7 +22,8 @@ body{
     min-height: 100vh;
     background-color: var(--LIGHT-COLOR);
     overflow-x: hidden;
-    z-index: -10000;
+    /* z-index: -10000; */
+
 }
 nav{
     margin: 0 auto;
