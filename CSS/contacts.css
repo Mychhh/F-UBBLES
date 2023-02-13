@@ -25,7 +25,7 @@
     right: -7%;
 }
 .contacts__bubble_left{
-    /* opacity: 0; */
+    opacity: 0;
 }
 .contacts__bubble_left::before{
     content: '';
@@ -40,6 +40,58 @@
     transform: translate(-1.5rem, 6rem);
 }
 
+.contacts__bubble_left.active{
+    animation-name: contactsBubbleLeft;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    opacity: 1;
+}
+.contacts__bubble_left.active::before{
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    transform: translate(4rem, 3.5rem);
+
+    animation-name: contactsBubbleLeftBefore;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    opacity: 1;
+}
+.contacts__bubble_left.active::after{
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    transform: translate(-1.5rem, 6rem);
+
+    animation-name: contactsBubbleLeftAfter;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    opacity: 1;
+}
+@keyframes contactsBubbleLeft {
+    from{
+        transform: translate(0, 400%);
+    }
+    to{
+        transform: translate(0, 0);
+    }
+}
+@keyframes contactsBubbleLeftBefore {
+    from{
+        transform: translate(4rem, 300%);
+    }
+    to{
+        transform: translate(4rem, 3.5rem);
+    }
+}
+@keyframes contactsBubbleLeftAfter {
+    from{
+        transform: translate(-1.5rem, 200%);
+    }
+    to{
+        transform: translate(-1.5rem, 6rem);
+    }
+}
 .contacts__bubble_right,
 .contacts__bubble_right::before,
 .contacts__bubble_right::after{
@@ -53,7 +105,7 @@
     left: -7%;
 }
 .contacts__bubble_right{
-    /* opacity: 0; */
+    opacity: 0;
 }
 .contacts__bubble_right::before{
     content: '';
@@ -66,6 +118,39 @@
     width: 3rem;
     height: 3rem;
     transform: translate(-6rem, -1rem);
+}
+.contacts__bubble_right.active{
+    animation-name: contactsBubbleRight;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    opacity: 1;
+}
+.contacts__bubble_right.active::before{
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    transform: translate(-3rem, -4rem);
+
+    animation-name: contactsBubbleRightBefore;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    opacity: 1;
+}
+@keyframes contactsBubbleRight {
+    from{
+        transform: translate(0, 200%);
+    }
+    to{
+        transform: translate(0, 0);
+    }
+}
+@keyframes contactsBubbleRightBefore {
+    from{
+        transform: translate(-3rem, 200%);
+    }
+    to{
+    transform: translate(-3rem, -4rem);
+    }
 }
 
 .contacts__form_container{

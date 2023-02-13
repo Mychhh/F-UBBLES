@@ -49,7 +49,7 @@
 }
 #background__image1{
     animation-name: moveToLeft;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
@@ -72,7 +72,7 @@
 }
 #background__image2{
     animation-name: moveToRight;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
@@ -160,7 +160,7 @@
 }
 .background__bubbles{
     animation-name: bubblesUp;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-timing-function: linear;
 }
 .background__bubbles::before{
@@ -171,7 +171,7 @@
     transform: translate(4rem, -2em);
 
     animation-name: bubblesUpBefore;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-timing-function: linear;
 }
 .background__bubbles::after{
@@ -182,7 +182,7 @@
     transform: translate(5rem, 3rem);
 
     animation-name: bubblesUpAfter;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-timing-function: linear;
 }
 
