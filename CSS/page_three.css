@@ -311,6 +311,12 @@
 
 /* EXTRA SMALL SCREEN */
 @media screen and (max-width: 481px) {
+    .page_three{
+        margin: 4rem 0 0 0;
+        position: relative;
+        width: 100%;
+        padding: 4rem 0;
+    }
     .page_three__cards_container{
         display: flex;
         gap: 2rem;

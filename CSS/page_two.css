@@ -267,6 +267,14 @@
 
 /* EXTRA SMALL SCREEN */
 @media screen and (max-width: 481px) {
+    .page_two{
+        margin: -2rem 0 0 0;
+        position: relative;
+        width: 100%;
+        padding: 3rem;
+        
+        overflow: hidden;
+    }
     .cards_container{
         display: flex;
         flex-flow: column nowrap;
@@ -274,6 +282,14 @@
 }
 /* SMALL SCREEN */
 @media screen and (min-width: 481px) and (max-width: 768px) {
+    .page_two{
+        margin: -2rem 0 0 0;
+        position: relative;
+        width: 100%;
+        padding: 3rem;
+
+       overflow: hidden;
+    }
     .cards_container{
         display: flex;
         flex-flow: column nowrap;
