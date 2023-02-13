@@ -3,6 +3,7 @@ let aosBubbles = Array.from(document.querySelectorAll('.bubble'))
 window.addEventListener('scroll', scanBubbles)
 window.addEventListener('scroll', scanCardsBubbble)
 
+// for background bubbles
 function scanBubbles(){
     aosBubbles.forEach(bubbles => {
         if(isVisible(bubbles)){
@@ -13,12 +14,7 @@ function scanBubbles(){
     })
 }
 
-function isVisible(bubbles){
-    const bubblesDiv = bubbles.getBoundingClientRect()
-    let distance = -10
-    return bubblesDiv.top - window.innerHeight < distance ? true : false
-}
-
+// for cards bubbles
 let aosCardsBubbles =  Array.from(document.querySelectorAll('.page_three__cards_bubble'))
 
 function scanCardsBubbble(){
@@ -29,4 +25,10 @@ function scanCardsBubbble(){
             aoscardsbubbles.classList.remove('active')
         }
     })
+}
+
+function isVisible(bubbles){
+    const bubblesDiv = bubbles.getBoundingClientRect()
+    let distance = -10
+    return bubblesDiv.top - window.innerHeight < distance ? true : false
 }

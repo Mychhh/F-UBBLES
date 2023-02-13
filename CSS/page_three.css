@@ -316,6 +316,8 @@
         position: relative;
         width: 100%;
         padding: 4rem 0;
+
+        overflow-x: hidden;
     }
     .page_three__cards_container{
         display: flex;
@@ -400,6 +402,14 @@
 }
 /* SMALL SCREEN */
 @media screen and (min-width: 481px) and (max-width: 768px) {
+    .page_three{
+        margin: 4rem 0 0 0;
+        position: relative;
+        width: 100%;
+        padding: 4rem 0;
+
+        overflow-x: hidden;
+    }
     .page_three__cards_container{
         display: flex;
         gap: 2rem;
