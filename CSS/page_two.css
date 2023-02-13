@@ -205,7 +205,7 @@
     border-bottom: 1px solid var(--DARK-COLOR);
 }
 .cards_img{
-    background-image: url("/Images/Frame3.png");
+    background-image: url('/Images/Frame3.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
