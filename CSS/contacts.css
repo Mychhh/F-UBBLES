@@ -1,0 +1,219 @@
+.contacts{
+    width: 85%;
+    margin: 3rem auto;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 2rem;
+}
+.contacts__text{
+    width: 50%;
+    position: relative;
+}
+
+.contacts__bubble_left,
+.contacts__bubble_left::before,
+.contacts__bubble_left::after{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: linear-gradient(to top right, transparent, var(--YELLOW-COLOR));
+
+    position: absolute;
+    bottom: -20%;
+    right: -7%;
+}
+.contacts__bubble_left{
+    /* opacity: 0; */
+}
+.contacts__bubble_left::before{
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    transform: translate(4rem, 3.5rem);
+}
+.contacts__bubble_left::after{
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    transform: translate(-1.5rem, 6rem);
+}
+
+.contacts__bubble_right,
+.contacts__bubble_right::before,
+.contacts__bubble_right::after{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: linear-gradient(to top right, transparent, var(--YELLOW-COLOR));
+
+    position: absolute;
+    top: -20%;
+    left: -7%;
+}
+.contacts__bubble_right{
+    /* opacity: 0; */
+}
+.contacts__bubble_right::before{
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    transform: translate(-3rem, -4rem);
+}
+.contacts__bubble_right::after{
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    transform: translate(-6rem, -1rem);
+}
+
+.contacts__form_container{
+    width: 50%;
+}
+.class__form{
+    height: 30rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+form{
+    background-color: var(--YELLOW-COLOR);
+    width: 90%;
+    margin: 0 auto;
+    padding: 1em 2em;
+    border-radius: 2em;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+form > h1{
+    grid-column: 1/5;
+    font-size: var(--HEADER1-SIZE);
+    margin: 0.5rem 0;
+}
+form > .name{
+    grid-column: 1/5;
+    font-size: var(--PARAGRAPH-SIZE);
+    display: flex;
+    flex-flow: column  nowrap;
+}
+form > .name > input{
+    border-radius: 0.5em;
+    width: 100%;
+    height: 2rem;
+    border: none;
+    padding: 0.5em;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+form > .email{
+    grid-column: 1/5;
+    font-size: var(--PARAGRAPH-SIZE);
+    display: flex;
+    flex-flow: column  nowrap;
+}
+form > .email > input{
+    border-radius: 0.5em;
+    width: 100%;
+    height: 2rem;
+    border: none;
+    padding: 0.5em;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+form > .message{
+    grid-column: 1/5;
+    font-size: var(--PARAGRAPH-SIZE);
+    display: flex;
+    flex-flow: column  nowrap;
+}
+form > .message > textarea{
+    border-radius: 0.5em;
+    width: 100%;
+    height: clamp(5rem, 15vh, 10rem);
+    border: none;
+    padding: 0.5em;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+form > .submit{
+    grid-column: 1/5;
+}
+form > .submit > input{
+    font-size: var(--PARAGRAPH-SIZE);
+    background-color: var(--LIGHT-COLOR);
+    border: none;
+    cursor: pointer;
+    padding: 0.25em 0.5em;
+    border-radius: 0.5em;    
+    margin: 0.5rem 0;
+}
+
+/* EXTRA SMALL SCREEN */
+@media screen and (max-width: 481px) {
+    .contacts{
+        width: 85%;
+        margin: 3rem auto;
+
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        align-items: center;
+        gap: 1rem;
+    }
+    .contacts__text{
+        width: 90%;
+        position: relative;
+        text-align: center;
+    }
+    .contacts__form_container{
+        width: 90%;
+    }
+    form{
+        background-color: var(--YELLOW-COLOR);
+        width: 100%;
+        margin: 0 auto;
+        padding: 0.5em 1em;
+        border-radius: 2em;
+    
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+}
+/* SMALL SCREEN */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .contacts{
+        width: 85%;
+        margin: 3rem auto;
+
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        align-items: center;
+        gap: 1rem;
+    }
+    .contacts__text{
+        width: 80%;
+        position: relative;
+        text-align: center;
+    }
+    .contacts__form_container{
+        width: 80%;
+    }
+}
+/* MEDIUM SCREEN */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+}
+/* LARGE SCREEN */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+}
+/* EXTRA LARGE SCREEN */
+@media screen and (min-width: 1201px) {
+}
+/* MOBILE DEVICE LANDSCAPE */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4){
+}
