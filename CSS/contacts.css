@@ -11,7 +11,9 @@
     width: 50%;
     position: relative;
 }
-
+.contacts__text > p{
+    font-size: var(--PARAGRAPH-SIZE);
+}
 .contacts__bubble_left,
 .contacts__bubble_left::before,
 .contacts__bubble_left::after{
